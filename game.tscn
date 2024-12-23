@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dppgqtsbaa8ts"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_1vsb3"]
+[ext_resource type="PackedScene" uid="uid://dn0113d83iibn" path="res://joystick.tscn" id="1_elsye"]
+[ext_resource type="Texture2D" uid="uid://d2afahmg6shft" path="res://icon.svg" id="3_0wrjv"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_1vsb3")
+
+[node name="Joystick" parent="." instance=ExtResource("1_elsye")]
+offset_left = 45.0
+offset_top = 349.0
+offset_right = 301.0
+offset_bottom = 605.0
+
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(369, 171)
+
+[node name="Icon" type="Sprite2D" parent="player"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_0wrjv")
